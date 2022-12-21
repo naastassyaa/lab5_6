@@ -56,10 +56,12 @@ public:
     }
 
     void remove(int position) {
-        if (position < m_objects.size() & position >= 0)
+        if (position < m_objects.size() & position >= 0){
             m_objects.erase(m_objects.begin() + position);
-        else
+            }
+        else{
             cout << "Wrong position" << endl;
+            }
     }
 
     void rearrangement(int position, int x, int y) {
@@ -67,9 +69,10 @@ public:
     }
 
     void print_objects() {
-        for (auto obj: m_objects)
+        for (auto obj: m_objects){
             cout << obj->getName() << ' ' << obj->getCoordinates() << endl;
         cout<<endl;
+    }
     }
 
 };
